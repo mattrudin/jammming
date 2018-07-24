@@ -4,9 +4,10 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
 	render() {
 		return(
-			<div>
-			
-			</div>
+			<div className="SearchBar">
+         		<input placeholder="Enter A Song Title" />
+          		<a>SEARCH</a>
+        	</div>
 			);
 	}
 }

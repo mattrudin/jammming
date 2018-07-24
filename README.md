@@ -5,11 +5,13 @@ Tags: *Build Front-End Web Applications from Scratch*
 
 ## Index
 
-[1. Features](##1-features/) 
+[1. Features](#1-features/) 
 
-[2. Requirements](##2-requirements/)
+[2. Requirements](#2-requirements/)
 
-[3. Lessons learned](##3-lessons-learned)
+[3. ToDo](#3-todo/)
+
+[4. Lessons learned](#4-lessons-learned)
 
 
 ## 1. Features
@@ -33,6 +35,7 @@ Below is a list of the website's features:
 * SearchBar.js
 * Results.js
 * NewPlaylist.js
+* Spotify.js
 
 ```
 * How will the application handle state?
@@ -43,7 +46,15 @@ Below is a list of the website's features:
 ```
 * SearchBar.js
   * .handleSearch
-
+* Results
+  * .populateList
+* NewPlaylist.js
+  * .addSong
+  * .removeSong
+  * .changeTitle
+  * .savePlaylist
+* Spotify.js
+  * .login
 
 ```
 * How does the application hook up to the Spotify API?
@@ -54,4 +65,10 @@ Below is a list of the website's features:
 ```
 
 
-## 3. Lessons learned
+## 3. ToDo
+* fix CSS code in app.css (alignment of components)
+* add fonts
+* fix favicon.ico
+
+
+## 4. Lessons learned
