@@ -4,7 +4,6 @@ import './Results.css';
 class Results extends React.Component {
 	render() {
 		return(
-			<div className="App-playlist">
 	          <div className="SearchResults">
 		            <h2>Results</h2>
 		            <div className="TrackList">
@@ -45,7 +44,6 @@ class Results extends React.Component {
 		            </div>
 	          </div>
           	</div>
-         </div>
 		);
 	}
 }

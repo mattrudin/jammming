@@ -66,9 +66,9 @@ Below is a list of the website's features:
 
 
 ## 3. ToDo
-* fix CSS code in app.css (alignment of components)
-* add fonts
-* fix favicon.ico
+* ~~fix CSS code in app.css (alignment of components)~~
+* ~~add fonts~~
+* ~~fix favicon.ico~~
 
 
 ## 4. Lessons learned

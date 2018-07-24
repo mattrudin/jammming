@@ -9,11 +9,15 @@ import SearchBar from './components/SearchBar/SearchBar';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Ja<span class="highlight">mmm</span>ing</h1>
-        <SearchBar />
-        <Results />
-        <Playlist />
+      <div className="data-reactroot">
+          <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <div className="App">
+          <SearchBar />
+          <div className="App-playlist">
+            <Results />
+            <Playlist />
+          </div>
+        </div>
       </div>
     );
   }
