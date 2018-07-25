@@ -27,15 +27,18 @@ Below is a list of the website's features:
 * Save Playlist to Account — users can save their custom playlist by clicking a button called SAVE TO SPOTIFY.
 ```
 
+
 ## 2. Requirements
 ```
 * What components does the application need?
 ```
 * App.js
-* SearchBar.js
-* Results.js
-* NewPlaylist.js
-* Spotify.js
+  * SearchBar.js
+  * SearchResults.js
+    * TrackList.js
+    * Track.js
+  * NewPlaylist.js
+  * Spotify.js
 
 ```
 * How will the application handle state?
@@ -44,31 +47,33 @@ Below is a list of the website's features:
 ```
 * What methods does the application need?
 ```
-* SearchBar.js
-  * .handleSearch
-* Results
-  * .populateList
-* NewPlaylist.js
-  * .addSong
-  * .removeSong
-  * .changeTitle
-  * .savePlaylist
-* Spotify.js
-  * .login
+* SearchBar.js //contains the search bar and controller
+  * .handleSearch //search query to Spotify trough the API
+* SearchResults.js //contains the TrackList.js
+  * .populateList //response from Spotify trough the API
+  * .addSong //add a song to NewPlaylist.js, song remains in SearchResults.js
+* TrackList.js //contains Track.js
+* Track.js //Track information from Spotify trough API
+* NewPlaylist.js //contains the added Track.js
+  * .removeSong //removes a song from NewPlaylist.js
+  * .changeTitle //changes the playlist title
+  * .savePlaylist //saves the list to Spotify trough the API
+* Spotify.js //API to Spotify
+  * .login //does what it says
 
 ```
 * How does the application hook up to the Spotify API?
 ```
+https://developer.spotify.com/documentation/general/guides/authorization-guide/
 
 ```
 * How does the application save a playlist to a user's profile?
 ```
+https://developer.spotify.com/documentation/general/guides/working-with-playlists/
 
 
 ## 3. ToDo
-* ~~fix CSS code in app.css (alignment of components)~~
-* ~~add fonts~~
-* ~~fix favicon.ico~~
+* Track.js and TrackList.js are hardcoded
 
 
 ## 4. Lessons learned

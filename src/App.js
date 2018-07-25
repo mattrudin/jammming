@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Results from './components/Results/Results';
+import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
 //import Spotify from './util/Spotify';
 import SearchBar from './components/SearchBar/SearchBar';
@@ -14,7 +14,7 @@ class App extends Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <Results />
+            <SearchResults />
             <Playlist />
           </div>
         </div>
