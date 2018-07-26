@@ -11,7 +11,7 @@ Tags: *Build Front-End Web Applications from Scratch*
 
 [3. ToDo](#3-todo/)
 
-[4. Lessons learned](#4-lessons-learned)
+[4. Lessons learned](#4-lessons-learned)  
 
 
 ## 1. Features
@@ -25,7 +25,7 @@ Below is a list of the website's features:
 * Remove Song from Custom Playlist — users can remove a track from their playlist by selecting a - sign on the right side of the track's display container.
 * Change Playlist Title — users can change the title of their custom playlist.
 * Save Playlist to Account — users can save their custom playlist by clicking a button called SAVE TO SPOTIFY.
-```
+```  
 
 
 ## 2. Requirements
@@ -38,7 +38,7 @@ Below is a list of the website's features:
     * TrackList.js
       * Track.js
   * NewPlaylist.js
-  * Spotify.js
+  * Spotify.js  
 
 ```
 * How will the application handle state?
@@ -51,7 +51,7 @@ State flow:
 4. TrackList.js *"props"* the information to Track.js
 
 The following link explains a lot in terms of the state of a component:
-[How to handle state in React. The missing FAQ.](https://medium.com/react-ecosystem/how-to-handle-state-in-react-6f2d3cd73a0c)
+[How to handle state in React. The missing FAQ.](https://medium.com/react-ecosystem/how-to-handle-state-in-react-6f2d3cd73a0c)  
 ```
 * What methods does the application need?
 ```
@@ -67,13 +67,13 @@ The following link explains a lot in terms of the state of a component:
   * .changeTitle //changes the playlist title
   * .savePlaylist //saves the list to Spotify trough the API
 * Spotify.js //API to Spotify
-  * .login //does what it says
+  * .login //does what it says  
 
 ```
 * How does the application hook up to the Spotify API?
 ```
-[Spotify: Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
-[Spotify Endpoint: Search for an item](https://developer.spotify.com/documentation/web-api/reference/search/search/)
+[Spotify: Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/)  
+[Spotify Endpoint: Search for an item](https://developer.spotify.com/documentation/web-api/reference/search/search/)  
 
 Authorization flow:
 1. Login with client_id and client_secret
@@ -85,20 +85,20 @@ Search flow:
 ```javascript
 https://api.spotify.com/v1/search?q=userInput" -H "Authorization: Bearer {access token}
 ```
-2. Get tracks
+2. Get tracks  
 
 
 ```
 * How does the application save a playlist to a user's profile?
 ```
-[Spotify: Working with Playlists](https://developer.spotify.com/documentation/general/guides/working-with-playlists/)
-[Spotify Endpoint: Create a Playlist](https://developer.spotify.com/documentation/web-api/reference/playlists/create-playlist/)
+[Spotify: Working with Playlists](https://developer.spotify.com/documentation/general/guides/working-with-playlists/)  
+[Spotify Endpoint: Create a Playlist](https://developer.spotify.com/documentation/web-api/reference/playlists/create-playlist/)  
 
 
 ## 3. ToDo
 * Track.js and TrackList.js are hardcoded
 * complete Spotify.js with the authorization request 
-* [This site may be of help](https://glitch.com/~spotify-client-credentials)
+* [This site may be of help](https://glitch.com/~spotify-client-credentials)  
 
 
 ## 4. Lessons learned
