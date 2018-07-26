@@ -72,16 +72,33 @@ The following link explains a lot in terms of the state of a component:
 ```
 * How does the application hook up to the Spotify API?
 ```
-https://developer.spotify.com/documentation/general/guides/authorization-guide/
+[Spotify: Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
+[Spotify Endpoint: Search for an item](https://developer.spotify.com/documentation/web-api/reference/search/search/)
+
+Authorization flow:
+1. Login with client_id and client_secret
+2. Get access token
+
+Search flow:
+1. Search with query and valid access token
+    Example: 
+```javascript
+https://api.spotify.com/v1/search?q=userInput" -H "Authorization: Bearer {access token}
+```
+2. Get tracks
+
 
 ```
 * How does the application save a playlist to a user's profile?
 ```
-https://developer.spotify.com/documentation/general/guides/working-with-playlists/
+[Spotify: Working with Playlists](https://developer.spotify.com/documentation/general/guides/working-with-playlists/)
+[Spotify Endpoint: Create a Playlist](https://developer.spotify.com/documentation/web-api/reference/playlists/create-playlist/)
 
 
 ## 3. ToDo
 * Track.js and TrackList.js are hardcoded
+* complete Spotify.js with the authorization request 
+* [This site may be of help](https://glitch.com/~spotify-client-credentials)
 
 
 ## 4. Lessons learned
