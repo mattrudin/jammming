@@ -11,7 +11,7 @@ class Track extends React.Component{
 			<div className="Track">
 				<div className="Track-information">
 					<h3>{this.props.tracks.name}</h3>
-					<p>Elton John | Madman Across The Water</p>
+					<p>{this.props.tracks.artist} | {this.props.tracks.album}</p>
 				</div>
 				<a className="Track-action">+</a>
 			</div>

@@ -44,10 +44,16 @@ Below is a list of the website's features:
 * How will the application handle state?
 ```
 State will be handled by the App.js component.
-State flow:
+State flow *SearchResults*:
 1. The Spotify.js component will be envoked by App.js and the information will be *"state'd"* in the same
 2. App.js *"props"* the information to SearchResults.js
 3. SearchResults.js *"props"* the information to TrackList.js
+4. TrackList.js *"props"* the information to Track.js  
+
+State flow *Playlist*:
+1. The Spotify.js component will be envoked by App.js and the information will be *"state'd"* in the same
+2. App.js *"props"* the information to Playlist.js
+3. Playlist.js *"props"* the information to TrackList.js
 4. TrackList.js *"props"* the information to Track.js
 
 The following link explains a lot in terms of the state of a component:

@@ -8,11 +8,20 @@ import SearchBar from './components/SearchBar/SearchBar';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state.searchResults = {
-      name: 'Name',
-      artist: 'Artist',
-      album: 'Album',
-      id: 'id'
+    this.state = {
+      searchResults: {
+          name: 'Name',
+          artist: 'Artist',
+          album: 'Album',
+          id: 'id'
+        },
+      playlistName: 'default',
+      playlistTracks: [
+        { name: 'name',
+          artist: 'artist',
+          album: 'album',
+          id: 'id'}
+        ]
     }
   }
 
@@ -24,7 +33,7 @@ class App extends Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults}/>
-            <Playlist />
+            <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
           </div>
         </div>
       </div>
