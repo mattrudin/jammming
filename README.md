@@ -37,7 +37,7 @@ Below is a list of the website's features:
   * SearchResults.js
     * TrackList.js
       * Track.js
-  * NewPlaylist.js
+  * Playlist.js
   * Spotify.js  
 
 ```
@@ -62,7 +62,8 @@ The following link explains a lot in terms of the state of a component:
   * .addSong //add a song to NewPlaylist.js, song remains in SearchResults.js
 * TrackList.js //contains Track.js
 * Track.js //Track information from Spotify trough API
-* NewPlaylist.js //contains the added Track.js
+  * renderAction //toggles the button from '-' to '+' and vice-versa
+* Playlist.js //contains the added Track.js
   * .removeSong //removes a song from NewPlaylist.js
   * .changeTitle //changes the playlist title
   * .savePlaylist //saves the list to Spotify trough the API

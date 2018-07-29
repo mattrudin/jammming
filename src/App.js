@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
@@ -7,6 +6,16 @@ import Playlist from './components/Playlist/Playlist';
 import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state.searchResults = {
+      name: 'Name',
+      artist: 'Artist',
+      album: 'Album',
+      id: 'id'
+    }
+  }
+
   render() {
     return (
       <div className="data-reactroot">
@@ -14,7 +23,7 @@ class App extends Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <SearchResults />
+            <SearchResults searchResults={this.state.searchResults}/>
             <Playlist />
           </div>
         </div>
