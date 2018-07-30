@@ -2,8 +2,14 @@ import React from 'react';
 import './Track.css';
 
 class Track extends React.Component{
+	constructor//Step 45 + 46
+
 	renderAction(isRemoval) {
 		isRemoval ? '-' : '+';
+	}
+
+	addTrack() {
+
 	}
 
 	render() {

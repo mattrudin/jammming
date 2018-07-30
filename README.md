@@ -61,6 +61,8 @@ The following link explains a lot in terms of the state of a component:
 ```
 * What methods does the application need?
 ```
+* App.js
+  * .addTrack // adds a track to the Playlist.js
 * SearchBar.js //contains the search bar and controller
   * .handleSearch //search query to Spotify trough the API
 * SearchResults.js //contains the TrackList.js
