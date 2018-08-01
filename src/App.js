@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
-//import Spotify from './util/Spotify';
+import Spotify from './util/Spotify';
 import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
@@ -55,7 +55,7 @@ class App extends Component {
   }
 
   search(searchTerm) {
-    console.log(searchTerm);
+    Spotify.search(searchTerm);
   }
 
   render() {
@@ -65,7 +65,7 @@ class App extends Component {
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} 
+            <SearchResults searchResults={this.search} 
                            onAdd={this.addTrack} />
             <Playlist playlistName={this.state.playlistName} 
                       playlistTracks={this.state.playlistTracks}
