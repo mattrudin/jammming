@@ -1,5 +1,7 @@
 const clientID = '9886d9f956354ae89e837076c4ed464f';
 const redirectURI = 'http://localhost:3000/';
+let userID = '';
+let playlistID = '';
 let accessToken = '';
 let expiresIn = '';
 
@@ -16,7 +18,7 @@ const Spotify = {
 			window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`
 			}
 		}
-	}
+	},
 
 	search(term) {
 		return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
@@ -40,10 +42,10 @@ const Spotify = {
 				return [];
 			}
 		});
-	}
+	},
 
 	savePlaylist(playlistName, arrURI) {
-		if(!name && !arrURI) return;
+		if(!playlistName && !arrURI) return;
 		let token = this.getAccessToken();
 		const headers = {
       		Authorization: `Bearer ${token}`
@@ -53,8 +55,8 @@ const Spotify = {
     	}).then(response => {
 			return response.json();
 		}).then(jsonResponse => {
-			const userID = jsonResponse.id;
-		})
+			userID = jsonResponse.id;
+		});
 		fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
                 headers: headers,
                 method: `POST`,
@@ -62,12 +64,13 @@ const Spotify = {
         }).then(response => {
         	return response.json();
         }).then(jsonResponse => {
-        	const playlistID = jsonResponse.id; 
+        	playlistID = jsonResponse.id; 
         })
         fetch(`https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`, {
                 headers: headers,
                 method: 'POST',
                 body: JSON.stringify({uris: arrURI})
+		});
 	}
 }
 

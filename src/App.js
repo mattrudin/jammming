@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   savePlaylist() {
-    Spotify.savePlaylist(playlistName, playlistTracks);
+    Spotify.savePlaylist(/*playlistName, playlistTracks*/);
     this.setState({
       playlistName: 'default'
     })
