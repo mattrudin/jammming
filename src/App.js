@@ -46,7 +46,8 @@ class App extends Component {
   }
 
   savePlaylist() {
-    Spotify.savePlaylist(/*playlistName, playlistTracks*/);
+    const arrURI = this.state.playlistTracks.map(playlistTrack => playlistTrack.uri);
+    Spotify.savePlaylist(this.state.playlistName, arrURI);
     this.setState({
       playlistName: 'default'
     })

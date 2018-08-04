@@ -38,6 +38,8 @@ Below is a list of the website's features:
     * TrackList.js
       * Track.js
   * Playlist.js
+    * TrackList.js
+      * Track.js
   * Spotify.js  
 
 ```
@@ -62,21 +64,26 @@ The following link explains a lot in terms of the state of a component:
 * What methods does the application need?
 ```
 * App.js
-  * .addTrack // adds a track to the Playlist.js
-* SearchBar.js //contains the search bar and controller
-  * .handleSearch //search query to Spotify trough the API
-* SearchResults.js //contains the TrackList.js
-  * .populateList //response from Spotify trough the API
-  * .addSong //add a song to NewPlaylist.js, song remains in SearchResults.js
-* TrackList.js //contains Track.js
-* Track.js //Track information from Spotify trough API
-  * renderAction //toggles the button from '-' to '+' and vice-versa
-* Playlist.js //contains the added Track.js
-  * .removeSong //removes a song from NewPlaylist.js
-  * .changeTitle //changes the playlist title
-  * .savePlaylist //saves the list to Spotify trough the API
-* Spotify.js //API to Spotify
-  * .login //does what it says  
+  * .addTrack
+  * .removeTrack
+  * .updatePlaylistName
+  * .savePlaylist
+  * .search
+* SearchBar.js
+  * .search
+  * .handleSearch
+* SearchResults.js
+* TrackList.js
+* Track.js
+  * .addTrack
+  * .removeTrack
+  * .renderAction
+* Playlist.js
+  * .handleNameChange
+* Spotify.js
+  * .getAccessToken
+  * .search
+  * .savePlaylist  
 
 ```
 * How does the application hook up to the Spotify API?
@@ -84,18 +91,7 @@ The following link explains a lot in terms of the state of a component:
 [Spotify: Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/)  
 [Spotify Endpoint: Search for an item](https://developer.spotify.com/documentation/web-api/reference/search/search/)  
 
-Authorization flow:
-1. Login with client_id and client_secret
-2. Get access token
-
-Search flow:
-1. Search with query and valid access token
-    Example: 
-```javascript
-https://api.spotify.com/v1/search?q=userInput" -H "Authorization: Bearer {access token}
-```
-2. Get tracks  
-
+Via implicit grant flow.
 
 ```
 * How does the application save a playlist to a user's profile?
@@ -105,9 +101,11 @@ https://api.spotify.com/v1/search?q=userInput" -H "Authorization: Bearer {access
 
 
 ## 3. ToDo
-* Track.js and TrackList.js are hardcoded
-* complete Spotify.js with the authorization request 
-* [This site may be of help](https://glitch.com/~spotify-client-credentials)  
+* Release for approval 
 
 
 ## 4. Lessons learned
+* React children that will be used by two or more React parents (see Tracklist.js: it will be used by SearchResults.js and Playlist.js)
+* State and props in React components
+* Add and remove different things trough props/state
+* Handle API requests (was a tough one...)
